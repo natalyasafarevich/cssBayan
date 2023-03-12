@@ -1,16 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  transition: all 0.3s ease;
+}
+img {
+  display: block;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+h1 {
+  margin: 0 0 1.5625rem;
+}
 .wrapper {
+  font-family: "Roboto", sans-serif;
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
 }
-.accordin {
+.accordion {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 }
 .accordion__content {
-  display: none;
+  padding: 15px;
+  opacity: 0;
+  height: 0;
+  max-width: 30rem;
+  width: 100%;
+  margin: -15px auto 0;
 }
 .accordion__checkbox {
   display: none;
 }
-.accordion__checkbox:checked {
-  /* display: block; */
+.accordion:hover button {
+  opacity: 1;
+}
+.accordion__checkbox:hover + label .accordion__button,
+.accordion__checkbox:checked + label .accordion__button {
+  transform: rotate(90deg);
+}
+.accordion__checkbox:hover + label + .accordion__content,
+.accordion__checkbox:checked + label + .accordion__content {
+  opacity: 1;
+  height: 31.25rem;
+  margin: 0px auto 0;
+}
+
+.accordion__label,
+.accordion__item:hover {
+  cursor: pointer;
+}
+.accordion__label {
+  display: flex;
+  justify-content: space-between;
+}
+.accordion__item:hover .accordion__button {
+  opacity: 1;
+}
+.accordion__button {
+  opacity: 0;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+.accordion__label {
+  border-top: 1px solid grey;
 }
