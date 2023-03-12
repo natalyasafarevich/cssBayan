@@ -35,18 +35,32 @@ h1 {
 }
 .accordion:hover button {
   opacity: 1;
+  transition-delay: 0.5s;
 }
 .accordion__checkbox:hover + label .accordion__button,
 .accordion__checkbox:checked + label .accordion__button {
   transform: rotate(90deg);
 }
-.accordion__checkbox:hover + label + .accordion__content,
+.accordion__checkbox:hover + label + .accordion__content {
+  transition-delay: 0.3s;
+}
+.accordion__item:hover  .accordion__content{
+  opacity: 1;
+  height: 31.25rem;
+  margin: 0px auto 0;
+}
 .accordion__checkbox:checked + label + .accordion__content {
   opacity: 1;
   height: 31.25rem;
   margin: 0px auto 0;
 }
-
+label p{
+  font-size: 1.5625rem;
+}
+.accordion__checkbox:checked + label p {
+  font-weight: 500;
+  color: blue;
+}
 .accordion__label,
 .accordion__item:hover {
   cursor: pointer;
