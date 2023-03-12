@@ -1,0 +1,16 @@
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+.accordin {
+}
+.accordion__content {
+  display: none;
+}
+.accordion__checkbox {
+  display: none;
+}
+.accordion__checkbox:checked {
+  /* display: block; */
+}
